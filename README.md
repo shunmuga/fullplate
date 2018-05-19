@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# fullplate
+Fullplate with cbus os 
+>>>>>>> 7df0cf7b131487938142bcc5191f63ce6dd44251
