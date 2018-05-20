@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  PLU: 1
+  durability: MyString
+  diet_protected: MyString
+  weight: 1
+  size: MyString
+
+two:
+  name: MyString
+  PLU: 1
+  durability: MyString
+  diet_protected: MyString
+  weight: 1
+  size: MyString

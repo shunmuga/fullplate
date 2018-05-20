@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /foods
   # GET /foods.json
   def index
@@ -10,7 +10,7 @@ class FoodsController < ApplicationController
   # GET /foods/1
   # GET /foods/1.json
   def show
-    render template: "static_pages/#{params[:food]}"
+
   end
 
   # GET /foods/new

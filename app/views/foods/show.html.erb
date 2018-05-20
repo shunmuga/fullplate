@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @food.name %>
+</p>
+
+<p>
+  <strong>Plu:</strong>
+  <%= @food.PLU %>
+</p>
+
+<p>
+  <strong>Durability:</strong>
+  <%= @food.durability %>
+</p>
+
+<p>
+  <strong>Diet protected:</strong>
+  <%= @food.diet_protected %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @food.weight %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @food.size %>
+</p>
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>

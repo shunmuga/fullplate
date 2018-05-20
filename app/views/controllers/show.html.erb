@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @controller.User %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @controller.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @controller.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @controller.address %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @controller.zip %>
+</p>
+
+<%= link_to 'Edit', edit_controller_path(@controller) %> |
+<%= link_to 'Back', controllers_path %>

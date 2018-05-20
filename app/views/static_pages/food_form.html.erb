@@ -1,0 +1,18 @@
+<% provide(:title, "food_form") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %>food_form | Connecting people and food</title>
+  </head>
+  <body>
+    <h1>Full Plate</h1>
+    <p>This is the food_form.</p>
+
+    <%= render 'form', food: @food %>
+
+    <%= link_to 'Show', @food %> |
+    <%= link_to 'Back', foods_path %>
+
+    <%= yield %>
+  </body>
+</html>

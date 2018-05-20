@@ -4,6 +4,15 @@ def setup
   @base_title = "Full Plate: A Webportal connecting food"
 end
 
+def pantry
+  GET 	/foods/:id
+  @pantry = Foods.find(:all)
+end
+
+def food_form
+
+end
+
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
