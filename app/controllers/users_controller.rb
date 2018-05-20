@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    
   end
 
   # GET /users/new
@@ -19,6 +20,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+
   end
 
   # POST /users
@@ -28,15 +30,22 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
+        redirect_to '/'
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
+        redirect_to '/signup'
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
 
+  def user_params
+      params.require(:user).permit(:name, :email, :zip,:address,:password,
+                                   :password_confirmation)
+    end
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
@@ -64,11 +73,10 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :password)
     end
 end
